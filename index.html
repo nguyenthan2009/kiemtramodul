@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   // câu 1:
+        function PTBN(a,b){
+            if(a==0){
+                document.write('phương trình vô nghiệm')
+            }else{
+                document.write('phương trình có nghiệm =' +(-b/a))
+            }
+        }
+        PTBN(5,8)
+    
+    //Câu 2:
+    let index;
+     function Kiemtra(number,arr){
+         for(let i=0;i<arr.length;i++){
+             if(number== arr[i]){
+                 index=i
+                 document.write('vị trí của số trong mảng là:' +index)
+                 break;
+             }else{
+                 document.write('số vừa nhập không nằm trong mảng')
+                 break;
+             }
+         }
+
+     }
+     let arr = [1,2,3,4,5]
+     let number = prompt('nhập một số bất kì')
+     Kiemtra(number,arr)
+    
+     //Câu 3:
+     let dem =0
+     function songuyenam(arr){
+         for(let i=0;i<arr.length;i++){
+            let ch= arr.charAt(i)
+             if(ch=='a'||ch=='o'||ch=='e'||ch=='u'||ch=='i'){
+                 dem++;
+             }
+
+        }
+         document.write('số nguyên âm có trong chuỗi vừa nhập là' +dem)
+
+     }
+     let chuoi = prompt('nhập vào một chuỗi bất kì')
+     let arr= chuoi.split('')
+
+     
+     
+
+     // câu 4:
+
+     function Animal(name,weight){
+         this.name = name;
+         this.weight= weight;
+         this.setName = function(name){
+             this.name = name;
+         }
+         this.setWeight= function(weight){
+             this.weight = weight;
+         }
+         this.getName= function(){
+             return this.name;
+         }
+         this.getWeight= function(){
+             return this.weight;
+         }
+         this.toString= function(){
+             return this.name + this.weight
+         }
+
+     }
+     let objAnimal1 = new Animal('Elephant',45.6);
+     let ten =Animal.toString();
+     console.log(ten)
+     let objAnimal2= new Animal('Cat',12);
+     objAnimal2.setName('Mouse')
+     
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
